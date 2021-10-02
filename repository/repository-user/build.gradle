@@ -1,0 +1,22 @@
+plugins {
+    id "org.springframework.boot" version "2.4.6"
+    id 'java'
+}
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.monthree'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter')
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.3.4'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}

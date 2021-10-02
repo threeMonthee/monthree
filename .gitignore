@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/.idea/
+/gradle/
+/repository/repository-api/build/
+/repository/repository-order/build/
+/repository/repository-user/build/
+/service/service-api/build/
+/service/service-client/build/
+/service/service-login/build/
+/service/service-order/build/
