@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 group 'org.monthree'
@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation('org.projectlombok:lombok:1.18.20')
+    implementation 'com.baomidou:mybatis-plus-annotation:3.4.3.4'
     annotationProcessor('org.projectlombok:lombok:1.18.20')
 }
 

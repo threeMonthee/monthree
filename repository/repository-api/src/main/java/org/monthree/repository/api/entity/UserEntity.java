@@ -1,5 +1,6 @@
 package org.monthree.repository.api.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import lombok.Setter;
  * Created on 2021/10/1 8:56 PM
  **/
 
+@TableName("user")
 @Setter
 @Getter
 public class UserEntity extends Entity<Long>
