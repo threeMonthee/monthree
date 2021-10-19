@@ -1,6 +1,8 @@
 package org.monthree.repository.user;
 
 import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.rpc.service.GenericException;
+import org.apache.dubbo.rpc.service.GenericService;
 import org.monthree.repository.api.UserRepository;
 import org.monthree.repository.api.entity.UserEntity;
 import org.monthree.repository.user.mapper.UserMapper;
@@ -12,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  **/
 
 @DubboService
-public class UserRepositoryImpl implements UserRepository
+public class UserRepositoryImpl implements UserRepository, GenericService
 {
     @Autowired
     UserMapper userMapper;
@@ -34,5 +36,11 @@ public class UserRepositoryImpl implements UserRepository
     public void update(UserEntity entity)
     {
         userMapper.updateById(entity);
+    }
+
+    @Override
+    public Object $invoke(String method, String[] parameterTypes, Object[] args) throws GenericException
+    {
+        return null;
     }
 }

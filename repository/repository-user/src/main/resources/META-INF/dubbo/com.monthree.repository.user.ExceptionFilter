@@ -1,0 +1,1 @@
+dubboExceptionFilter=com.rainbow.goods.server.filter.DubboExceptionFilter
